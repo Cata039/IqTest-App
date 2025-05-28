@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.iqtestapp">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.IQTestApp.NoActionBar"
+        tools:targetApi="31">
+
+        <!-- Splash is now the MAIN/LAUNCHER -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- no longer launcher -->
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="false"/>
+
+        <!-- 2) Info screen to collect name, age, etc. -->
+        <activity
+            android:name=".InfoActivity"
+            android:exported="false" />
+
+        <!-- Instructions screen before the first game -->
+        <activity
+            android:name=".TurncoatInstructionsActivity"
+            android:exported="false"/>
+
+        <!-- 3) Your three mini‐game activities -->
+        <activity
+            android:name=".TurncoatActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".MazeQuizInstructionsActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".MazeQuizActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".QuickTapInstructionsActivity"
+            android:exported="false"/>
+        <activity
+            android:name=".QuickTapActivity"
+            android:exported="false"/>
+
+        <!-- 4) The final results screen -->
+        <activity
+            android:name=".ResultActivity"
+            android:exported="false"/>
+
+    </application>
+</manifest>
