@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">IQTestApp</string>
+    <string name="cd_floor_plan">Floor plan maze</string>
+    <string name="cd_3d_maze">3D maze view</string>
+</resources>
