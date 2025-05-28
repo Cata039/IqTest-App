@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181717"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="80dp">
+
+
+    <TextView
+        android:id="@+id/tv_inst_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="First Game: Color Turn"
+        android:textSize="30sp"
+        android:textColor="#FF0000"
+        android:fontFamily="@font/kranky"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_inst"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#333333"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@id/tv_inst_title"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tv_turncoat_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="
+• 6×6 board, each player has 7 black/white chips\n\n
+• On your turn you can either place one of your unused chips into your front row, OR move one existing chip into any adjacent empty cell (8-directions).\n\n
+• You may NOT move a chip your opponent just moved.\n\n
+• There are 18 hidden mines (3 per row facing each player). Landing on a mine FLIPS that chip’s color.\n\n
+• Win instantly by connecting 4 of your color—horizontally, vertically, or diagonally—even on your opponent’s turn.\n\n
+
+-> Memorization, Situational Judgment
+"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:lineSpacingExtra="4dp"/>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:text="Play"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/kranky"
+        android:textColor="#000000"
+        android:backgroundTint="#FF0000"
+        android:stateListAnimator="@null"
+        app:layout_constraintTop_toBottomOf="@id/card_inst"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

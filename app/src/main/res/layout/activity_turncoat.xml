@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181717"
+    android:padding="16dp">
+
+    <!-- 1) Game title -->
+    <TextView
+        android:id="@+id/tv_game_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Color Turn"
+        android:textSize="35sp"
+        android:textColor="#FF0000"
+        android:fontFamily="@font/kranky"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="80dp"/>
+
+    <!-- 2) Chronometer under the title -->
+    <Chronometer
+        android:id="@+id/chronometer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/kranky"
+        app:layout_constraintTop_toBottomOf="@id/tv_game_title"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"/>
+
+    <!-- 3) Black pebbles remaining -->
+    <TextView
+        android:id="@+id/tv_black_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Black: 7"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/kranky"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/chronometer"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- 4) Game board -->
+    <GridLayout
+        android:id="@+id/grid_board"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:rowCount="6"
+        android:columnCount="6"
+        app:layout_constraintTop_toBottomOf="@id/tv_black_count"
+        app:layout_constraintBottom_toTopOf="@id/tv_white_count"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- 5) White pebbles remaining -->
+    <TextView
+        android:id="@+id/tv_white_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="White: 7"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/kranky"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/grid_board"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

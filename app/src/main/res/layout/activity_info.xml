@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181717"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="150dp">
+
+    <!-- Screen Title -->
+    <TextView
+        android:id="@+id/tv_info_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Details"
+        android:textSize="30sp"
+        android:textColor="#FF0000"
+        android:fontFamily="@font/kranky"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Card containing form fields -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_form"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#333333"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@id/tv_info_title"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            tools:ignore="ExtraText">
+
+            <!-- Name Field -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/et_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your Name"
+                android:textColorHint="#AAAAAA"
+                android:textColor="#FFFFFF"
+                android:inputType="textPersonName"
+                android:backgroundTint="#555555"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Age Field -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Age"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/et_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Your Age"
+                android:textColorHint="#AAAAAA"
+                android:textColor="#FFFFFF"
+                android:inputType="number"
+                android:backgroundTint="#555555"
+                android:padding="12dp"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Gender Selection -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gender"
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="8dp" />
+
+            <RadioGroup
+                android:id="@+id/rg_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="24dp">
+
+                <RadioButton
+                    android:id="@+id/rb_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Male"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FF0000"
+                    android:layout_marginEnd="16dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Female"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FF0000"
+                    android:layout_marginEnd="16dp"/>
+
+                <RadioButton
+                    android:id="@+id/rb_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other"
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="#FF0000"/>
+            </RadioGroup>
+
+            <!-- Start Test Button -->
+            <Button
+                android:id="@+id/btn_start"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:paddingStart="32dp"
+                android:paddingEnd="32dp"
+                android:text="Start Test"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:fontFamily="@font/kranky"
+                android:backgroundTint="#FF0000"
+                android:stateListAnimator="@null"/>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

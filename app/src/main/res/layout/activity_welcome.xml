@@ -1,0 +1,71 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/maze_bg"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <!-- Card container fills the screen, centered -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        app:cardBackgroundColor="#333333"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:gravity="center_horizontal">
+
+            <!-- 1) Title moved INSIDE the card -->
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WELCOME\n to IQ Test Challenge"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#FF0000"
+                android:fontFamily="@font/kranky"
+                android:gravity="center"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- 2) Disclaimer text below the title -->
+            <TextView
+                android:id="@+id/tv_disclaimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="- This experience consists of three mini-games played back-to-back: Color Turn, Maze Code, and Quick Tap.\n- We’ll analyze your performance in each to generate a playful IQ estimate.\n\n- Please remember this is for entertainment only—not a clinical assessment or medical diagnosis."
+                android:textSize="16sp"
+                android:textColor="#FFFFFF"
+                android:lineSpacingExtra="4dp"
+                android:gravity="left|right"/>
+
+            <!-- 3) Next button at the bottom of the card -->
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_marginTop="24dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:text="Next"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:fontFamily="@font/kranky"
+                android:backgroundTint="#FF0000"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

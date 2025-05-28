@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:background="#C9000000"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tv_round_splash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FF0000"
+        android:textSize="24sp"
+        android:fontFamily="@font/kranky"
+        android:gravity="center"
+        android:text="ROUND 1"/>
+</FrameLayout>

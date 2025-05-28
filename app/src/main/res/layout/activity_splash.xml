@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/maze_bg"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/tv_splash_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IQ Test Challenge"
+        android:textColor="#FF0000"
+        android:fontFamily="@font/kranky"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="center"/>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_weight="1" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/tv_loading"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Loading..."-->
+<!--        android:textColor="#FF0000"-->
+<!--        android:fontFamily="@font/kranky"-->
+<!--        android:textSize="18sp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_marginBottom="4dp" />-->
+
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="200dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="36dp"
+        android:max="100"
+        android:progress="0"
+        android:indeterminate="false"
+        android:progressDrawable="@drawable/progress_bar_style" />
+
+
+</FrameLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#181717"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 1) Title -->
+        <TextView
+            android:id="@+id/tv_maze_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Maze Code"
+            android:textSize="30sp"
+            android:fontFamily="@font/kranky"
+            android:textStyle="bold"
+            android:textColor="#FF0000"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- 2) Timer -->
+        <Chronometer
+            android:id="@+id/chronometer_maze"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 3) Floor‐plan -->
+        <ImageView
+            android:id="@+id/iv_floor_plan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/round1_maze"
+            android:contentDescription="@string/cd_floor_plan"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 4) 3D Maze -->
+        <ImageView
+            android:id="@+id/iv_3d_maze"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/round1_3d"
+            android:contentDescription="@string/cd_3d_maze"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:id="@+id/tv_maze_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:layout_marginTop="16dp"/>
+
+        <!-- answer + flags row -->
+        <LinearLayout
+            android:id="@+id/answer_row"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <!-- the answer input itself -->
+            <EditText
+                android:id="@+id/et_maze_answer"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="e.g. A3"
+                android:textColorHint="#888888"
+                android:textColor="#FFFFFF"
+                android:gravity="center"/>
+
+            <!-- container for flags -->
+            <LinearLayout
+                android:id="@+id/flags_container"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <!-- 7) Submit button -->
+        <Button
+            android:id="@+id/btn_maze_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="Submit"
+            android:fontFamily="@font/kranky"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:backgroundTint="#FF0000"
+            android:layout_marginBottom="24dp"/>
+    </LinearLayout>
+</ScrollView>

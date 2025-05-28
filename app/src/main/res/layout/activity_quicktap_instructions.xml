@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181717"
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="80dp">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_inst_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Third Game: Quick Tap"
+        android:textSize="30sp"
+        android:textColor="#FF0000"
+        android:fontFamily="@font/kranky"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Instruction Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_inst"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#333333"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toBottomOf="@id/tv_inst_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/quick_tap_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="
+• You’ll see a 2×5 board of numbers. Two of them are “??”.\n\nWhen you spot the missing pair, enter them in the box below (comma-separated) and hit Submit.\n\nExample: 87,21
+"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:lineSpacingExtra="4dp"/>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Play button -->
+    <Button
+        android:id="@+id/btn_quicktap_play"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Play"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/kranky"
+        android:textColor="#000000"
+        android:backgroundTint="#FF0000"
+        android:stateListAnimator="@null"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/card_inst"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

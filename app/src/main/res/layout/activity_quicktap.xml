@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#181717"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Title + timer -->
+    <TextView
+        android:text="Quick Tap"
+        android:fontFamily="@font/kranky"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="#FF0000"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_round_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Round 1 of 3"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:fontFamily="@font/kranky"
+        android:layout_marginBottom="12dp"/>
+
+
+    <Chronometer
+        android:id="@+id/chronometer_quicktap"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- GridLayout 2×5 -->
+    <GridLayout
+        android:id="@+id/grid_quicktap"
+        android:columnCount="5"
+        android:rowCount="2"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- We'll populate these from code -->
+    </GridLayout>
+
+    <!-- answer row: input + submit -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="32dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_quicktap_answer"
+            android:hint="e.g. 87,78"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:fontFamily="@font/kranky"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_quicktap_submit"
+            android:text="Submit"
+            android:fontFamily="@font/kranky"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:backgroundTint="#FF0000"
+            android:layout_marginStart="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"/>
+    </LinearLayout>
+</LinearLayout>
